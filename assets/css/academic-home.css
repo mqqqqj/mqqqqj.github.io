@@ -60,15 +60,12 @@ main {
 }
 
 .hero {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
+  grid-template-columns: minmax(0, 1fr) 168px;
   align-items: start;
-  gap: 34px;
-  padding: 14px 0 10px;
-}
-
-.eyebrow {
-  display: none;
+  gap: 44px;
+  padding: 18px 0 22px;
 }
 
 h1,
@@ -78,10 +75,23 @@ h3 {
 }
 
 h1 {
-  margin: 0 0 14px;
+  margin: 0 0 2px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: 600;
+}
+
+.name-cn {
+  margin-left: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.58em;
+  font-weight: 500;
+}
+
+.role {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.96rem;
 }
 
 h2 {
@@ -103,8 +113,7 @@ p {
 }
 
 .subtitle {
-  max-width: 680px;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .profile-line {
@@ -149,9 +158,11 @@ p {
 }
 
 .portrait-wrap {
-  justify-self: end;
-  width: min(100%, 150px);
-  margin: -12px 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(100%, 168px);
+  margin: 0;
 }
 
 .portrait {
@@ -164,19 +175,12 @@ p {
   background: #f7f7f7;
 }
 
-.portrait-name {
-  margin-top: 6px;
-  color: var(--ink);
-  font-weight: 700;
+.portrait-affiliation {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.9rem;
   line-height: 1.35;
   text-align: center;
-}
-
-.portrait-name + .portrait-name {
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 0.94rem;
-  font-weight: 400;
 }
 
 .caption {
@@ -286,13 +290,19 @@ p {
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .portrait-wrap {
-    justify-self: start;
-    width: 150px;
-    margin-top: 0;
+    position: static;
+    grid-row: 1;
+    justify-self: center;
+    width: 148px;
+    margin: 0;
+  }
+
+  .hero-copy {
+    text-align: left;
   }
 
   .footer-inner {
